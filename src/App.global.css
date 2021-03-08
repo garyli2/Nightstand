@@ -1,0 +1,33 @@
+body {
+    background: #F0F4EF;
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+#time {
+    color: #0D1821;
+    font-size: 5rem;
+
+}
+
+.dashboardContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+}
+.timeContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 10;
+}
+
+.bottomToolBarContainer {
+    background-color: black;
+    flex: 2;
+}

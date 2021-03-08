@@ -18,7 +18,18 @@ function Time() {
         minute: '2-digit',
         second: '2-digit',
     });
-    return <h1 id="time">{timeString}</h1>;
+
+    const dateString = time.toLocaleString('en-CA', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+    });
+    return (
+        <>
+            <h1 id="time">{timeString}</h1>
+            <h3 id="date">{dateString}</h3>
+        </>
+    );
 }
 
 export default function Dashboard() {
