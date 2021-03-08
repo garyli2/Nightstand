@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import StatusBar from '../components/StatusBar';
 
 function Time() {
     const [time, setTime] = useState<Date>(new Date());
@@ -24,6 +25,7 @@ function Time() {
         month: '2-digit',
         day: '2-digit',
     });
+
     return (
         <>
             <h1 id="time">{timeString}</h1>
@@ -35,6 +37,7 @@ function Time() {
 export default function Dashboard() {
     return (
         <div className="dashboardContainer">
+            <StatusBar />
             <div className="timeContainer">
                 <Time />
             </div>

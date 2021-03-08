@@ -1,5 +1,5 @@
 body {
-    background: #F0F4EF;
+    background: #f0f4ef;
     margin: 0;
 }
 
@@ -8,7 +8,7 @@ h1 {
 }
 
 #time {
-    color: #0D1821;
+    color: #0d1821;
     font-size: 7rem;
 }
 
@@ -33,4 +33,16 @@ h1 {
 .bottomToolBarContainer {
     background-color: black;
     flex: 2;
+}
+
+.wifiIndicatorIcon {
+    color: white;
+    margin: 5px 5px 5px 5px;
+}
+
+/* Status Bar */
+.statusBarContainer {
+    display: flex;
+    background-color: black;
+    flex-direction: row-reverse;
 }
