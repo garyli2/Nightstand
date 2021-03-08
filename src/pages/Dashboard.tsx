@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import AppToolbar from '../components/AppToolbar';
 import StatusBar from '../components/StatusBar';
 
 function Time() {
@@ -42,7 +43,7 @@ export default function Dashboard() {
                 <Time />
             </div>
 
-            <div className="bottomToolBarContainer" />
+            <AppToolbar />
         </div>
     );
 }
