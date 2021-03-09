@@ -1,6 +1,5 @@
 module.exports = {
-    plugins: ['@typescript-eslint'],
-    extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+    extends: ['erb'],
     rules: {
         // A temporary hack related to IDE not resolving correct package.json
         'import/no-extraneous-dependencies': 'off',
