@@ -1,5 +1,9 @@
 module.exports = {
-    extends: ['erb'],
+    extends: [
+        'eslint:recommended',
+        'plugin:@typescript-eslint/eslint-recommended',
+        'plugin:@typescript-eslint/recommended',
+    ],
     rules: {
         // A temporary hack related to IDE not resolving correct package.json
         'import/no-extraneous-dependencies': 'off',
@@ -10,6 +14,9 @@ module.exports = {
         project: './tsconfig.json',
         tsconfigRootDir: __dirname,
         createDefaultProgram: true,
+    },
+    env: {
+        "node": true
     },
     settings: {
         'import/resolver': {
