@@ -1,0 +1,10 @@
+.statusBarContainer {
+    display: flex;
+    background-color: black;
+    flex-direction: row-reverse;
+}
+
+.wifiIndicatorIcon {
+    color: white;
+    margin: 5px 5px 5px 5px;
+}

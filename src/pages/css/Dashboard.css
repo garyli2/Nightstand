@@ -1,0 +1,22 @@
+#time {
+    color: #0d1821;
+    font-size: 7rem;
+}
+
+#date {
+    font-size: 1.5rem;
+}
+
+.dashboardContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.timeContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 10;
+}

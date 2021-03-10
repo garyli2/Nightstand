@@ -1,0 +1,20 @@
+.appButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px white solid;
+    border-radius: 3px;
+    height: 80%;
+}
+
+.appIcon {
+    color: white;
+    margin: 10px 10px 10px 10px;
+}
+
+.appButton > h2 {
+    margin: 5px 10px 5px 10px;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+}
