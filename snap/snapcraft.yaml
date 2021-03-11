@@ -1,0 +1,71 @@
+name: nightstand
+version: '0.1'
+summary: Hello World Electron app
+description: |
+  Simple Hello World Electron app as an example
+base: core18
+confinement: strict
+grade: stable
+
+apps:
+  nightstand:
+    command: desktop-launch xwayland-kiosk-launch nightstand --no-sandbox
+    extensions: [gnome-3-34]
+    plugs:
+    - browser-support
+    - network
+    - network-bind
+    - opengl
+    - pulseaudio
+    - wayland
+
+    environment:
+      # Correct the TMPDIR path for Chromium Framework/Electron to ensure
+      # libappindicator has readable resources.
+      TMPDIR: $XDG_RUNTIME_DIR
+
+  daemon:
+    daemon: simple
+    restart-condition: always
+    command: desktop-launch xwayland-kiosk-launch nightstand --no-sandbox
+    plugs:
+    - browser-support
+    - network
+    - network-bind
+    - opengl
+    - pulseaudio
+    - wayland
+
+environment:
+  XWAYLAND_FULLSCREEN_WINDOW_HINT: window_role="browser-window"
+
+parts:
+  nightstand:
+    plugin: nil
+    source: .
+    override-build: |
+        case $SNAPCRAFT_ARCH_TRIPLET in
+          "i386-linux-gnu") ARCH="ia32";;
+          "x86_64-linux-gnu") ARCH="x64";;
+          "arm-linux-gnueabihf") ARCH="armv7l";;
+          "aarch64-linux-gnu") ARCH="arm64";;
+          *) echo "ERROR: electron does not support the '$SNAPCRAFT_ARCH_TRIPLET' architecture" && exit 1;;
+        esac
+
+        yarn --registry https://registry.npmjs.org
+        yarn add electron electron-packager
+        npx electron-packager . --overwrite --platform=linux --arch=$ARCH --output=release-build --prune=true
+        cp -v -R ./Nightstand-$ARCH $SNAPCRAFT_PART_INSTALL/Nightstand
+    build-snaps:
+    - node/14/stable
+    build-packages:
+    - unzip
+    stage-packages:
+    - libnss3
+    - libnspr4
+
+  xwayland-kiosk-helper:
+    plugin: cmake
+    source: https://github.com/MirServer/xwayland-kiosk-helper.git
+    build-packages: [ build-essential ]
+    stage-packages: [ xwayland, i3, libegl1-mesa, libgl1-mesa-glx ]
