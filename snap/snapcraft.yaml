@@ -1,8 +1,8 @@
 name: nightstand
 version: '0.1'
-summary: Hello World Electron app
+summary: A smart bedside display app for Ubuntu Core
 description: |
-  Simple Hello World Electron app as an example
+  A smart bedside application for Ubuntu Core targeted at Raspberry Pi. Currently displays the date and time, with more planned.
 base: core18
 confinement: strict
 grade: stable
