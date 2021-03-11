@@ -4,7 +4,7 @@ summary: A smart bedside display app for Ubuntu Core
 description: |
   A smart bedside application for Ubuntu Core targeted at Raspberry Pi. Currently displays the date and time, with more planned.
 base: core18
-confinement: strict
+confinement: devmode
 grade: stable
 
 apps:
