@@ -1,6 +1,5 @@
 import React from 'react';
 import { BsClockFill } from 'react-icons/bs';
-// eslint-disable-next-line import/no-cycle
 import AppButton from './AppButton';
 
 export type AppProperties = {
