@@ -205,7 +205,12 @@ export default merge(baseConfig, {
       },
       // Common Image Formats and mp3, so our alarm file can be imported
       {
-        test: /\.(?:ico|gif|png|jpg|jpeg|webp|mp3)$/,
+        test: /\.(?:ico|gif|png|jpg|jpeg|webp)$/,
+        use: 'url-loader',
+      },
+      // load mp3 for our alarm sound
+      {
+        test: /\.(?:mp3)$/,
         use: 'url-loader',
       },
     ],

@@ -120,6 +120,11 @@ export default merge(baseConfig, {
         test: /\.(?:ico|gif|png|jpg|jpeg|webp)$/,
         use: 'url-loader',
       },
+      // load mp3 for our alarm sound
+      {
+        test: /\.(?:mp3)$/,
+        use: 'url-loader',
+      },
     ],
   },
 
