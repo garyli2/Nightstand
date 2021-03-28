@@ -1,0 +1,23 @@
+.alarmContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.alarmContentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 10;
+}
+
+.alarmListContainer {
+    width: 80%;
+}
+
+.addAlarmButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}

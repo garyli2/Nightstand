@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint global-require: off, no-console: off */
 
 /**
@@ -74,6 +75,7 @@ const createWindow = async () => {
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false,
+            enableRemoteModule: true,
         },
     });
 
@@ -102,10 +104,6 @@ const createWindow = async () => {
         event.preventDefault();
         shell.openExternal(url);
     });
-
-    // Remove this if your app does not use auto updates
-    // eslint-disable-next-line
-    new AppUpdater();
 };
 
 /**

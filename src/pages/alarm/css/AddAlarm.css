@@ -1,0 +1,22 @@
+.addAlarmContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.addAlarmContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 10;
+}
+
+.addAlarmForm {
+    width: 80%;
+}
+
+.alarmInputContainer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}

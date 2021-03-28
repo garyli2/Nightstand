@@ -10,9 +10,9 @@ export type AppProperties = {
 
 const APPS: AppProperties[] = [
     {
-        name: 'Time',
+        name: 'Alarm',
         icon: <BsClockFill className="appIcon" size={70} />,
-        path: '/timer',
+        path: '/alarm',
     },
 ];
 

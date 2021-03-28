@@ -16,4 +16,16 @@ h1 {
 @import './components/css/AppButton.css';
 @import './components/css/AppToolbar.css';
 
-@import './pages/css/Timer.css';
+@import './pages/alarm/css/Alarm.css';
+@import './pages/alarm/css/AddAlarm.css';
+
+/* Black back bar for every page */
+.backBarContainer {
+    display: flex;
+    background-color: black;
+    flex: 1;
+    height: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
