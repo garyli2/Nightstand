@@ -26,4 +26,5 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: yarn
+    - run: touch assets/alarm.mp3 # create a placeholder alarm file so our yarn builds don't fail
     - run: yarn build
