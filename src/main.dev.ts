@@ -16,6 +16,8 @@ import { app, BrowserWindow, shell } from 'electron';
 import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
 
+const isProd = process.env.NODE_ENV !== 'development' && process.env.DEBUG_PROD !== 'true';
+
 export default class AppUpdater {
     constructor() {
         log.transports.file.level = 'info';
@@ -72,6 +74,10 @@ const createWindow = async () => {
         width: 1024,
         height: 728,
         icon: getAssetPath('icon.png'),
+        kiosk: isProd,
+        alwaysOnTop: isProd,
+        frame: !isProd,
+        fullscreen: isProd,
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false,
