@@ -22,6 +22,7 @@ function Time() {
     });
 
     const dateString = time.toLocaleString('en-CA', {
+        weekday: 'long',
         year: 'numeric',
         month: '2-digit',
         day: '2-digit',
