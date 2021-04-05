@@ -158,7 +158,7 @@
     "@emotion/react": "^11.0.0",
     "@emotion/styled": "^11.0.0",
     "@material-ui/core": "^5.0.0-alpha.28",
-    "@material-ui/lab": "^5.0.0-alpha.28",
+    "@material-ui/lab": "^5.0.0-alpha.29",
     "@material-ui/pickers": "^3.3.10",
     "date-fns": "^2.19.0",
     "electron-log": "^4.3.2",
