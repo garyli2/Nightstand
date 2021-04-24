@@ -1,5 +1,5 @@
 {
-  "name": "Nightstand",
+  "name": "nightstand",
   "private": true,
   "scripts": {
     "build": "concurrently \"yarn build:main\" \"yarn build:renderer\"",
