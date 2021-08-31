@@ -1,7 +1,7 @@
 .appButton {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     border: 1px white solid;
     border-radius: 3px;
     height: 80%;
